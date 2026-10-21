@@ -1,0 +1,34 @@
+/**
+ * ELEMENTS: headings
+ */
+
+@use "../settings";
+@use "../tools";
+
+h1,
+h2,
+h3 {
+  font-family: settings.$font-family-display;
+  font-weight: settings.$font-weight-bold;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: tools.rem(40px);
+
+  @include tools.mq(md) {
+    font-size: tools.rem(64px);
+  }
+}
+
+h2 {
+  font-size: tools.rem(30px);
+
+  @include tools.mq(md) {
+    font-size: tools.rem(42px);
+  }
+}
+
+h3 {
+  font-size: tools.rem(22px);
+}

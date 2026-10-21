@@ -1,0 +1,15 @@
+/**
+ * ELEMENTS: links
+ */
+
+@use "../settings";
+
+a {
+  color: settings.$color-primary;
+  text-underline-offset: 0.2em;
+
+  &:hover,
+  &:focus-visible {
+    color: settings.$color-accent;
+  }
+}

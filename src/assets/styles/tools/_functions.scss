@@ -1,0 +1,47 @@
+/**
+ * TOOLS: functions
+ * Funcions pròpies de Sass. No generen CSS.
+ */
+
+@use "sass:map";
+@use "sass:math";
+@use "../settings";
+
+/// Converteix un valor en px a rem.
+/// @param {Number} $px - Valor en píxels (amb o sense unitat)
+/// @return {Number} Valor en rem
+/// @example rem(24px) => 1.5rem
+@function rem($px) {
+  @if math.is-unitless($px) {
+    $px: $px * 1px;
+  }
+
+  @return math.div($px, settings.$font-size-base) * 1rem;
+}
+
+/// Retorna un múltiple de la unitat d'espaiat, en rem.
+/// @param {Number} $multiplier - Nombre d'unitats
+/// @example spacing(3) => 1.5rem (3 x 8px)
+@function spacing($multiplier) {
+  @return rem($multiplier * settings.$spacing-unit);
+}
+
+/// Retorna el z-index d'una capa definida a $z-layers.
+/// @param {String} $layer - Nom de la capa
+@function z($layer) {
+  @if not map.has-key(settings.$z-layers, $layer) {
+    @error "La capa `#{$layer}` no existeix a $z-layers.";
+  }
+
+  @return map.get(settings.$z-layers, $layer);
+}
+
+/// Retorna el valor d'un breakpoint definit a $breakpoints.
+/// @param {String} $name - Nom del breakpoint
+@function breakpoint($name) {
+  @if not map.has-key(settings.$breakpoints, $name) {
+    @error "El breakpoint `#{$name}` no existeix a $breakpoints.";
+  }
+
+  @return map.get(settings.$breakpoints, $name);
+}

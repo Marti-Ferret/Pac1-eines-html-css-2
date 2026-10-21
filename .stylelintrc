@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "selector-class-pattern": [
+      "^(o|c|u|is|has)-[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Les classes han de seguir BEM amb prefix ITCSS (o-, c-, u-, is-, has-): p. ex. c-block__element--modifier"
+      }
+    ],
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": true,
+    "selector-max-compound-selectors": 3,
+    "max-nesting-depth": [
+      2,
+      {
+        "ignoreAtRules": ["media", "include", "supports"]
+      }
+    ],
+    "declaration-no-important": true,
+    "color-named": "never",
+    "color-hex-length": "short",
+    "length-zero-no-unit": true,
+    "font-weight-notation": "numeric",
+    "shorthand-property-no-redundant-values": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "scss/dollar-variable-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      { "message": "Les variables Sass han d'estar en kebab-case" }
+    ],
+    "scss/at-mixin-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      { "message": "Els mixins han d'estar en kebab-case" }
+    ],
+    "scss/at-function-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      { "message": "Les funcions han d'estar en kebab-case" }
+    ],
+    "scss/no-global-function-names": true
+  },
+  "overrides": [
+    {
+      "files": ["src/assets/styles/objects/**/*.scss", "src/assets/styles/components/**/*.scss"],
+      "rules": {
+        "selector-max-type": [0, { "message": "Objects i components només poden usar classes (no selectors d'element)" }]
+      }
+    },
+    {
+      "files": ["src/assets/styles/utilities/**/*.scss"],
+      "rules": {
+        "declaration-no-important": null
+      }
+    }
+  ]
+}

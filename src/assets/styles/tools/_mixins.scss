@@ -1,0 +1,15 @@
+/**
+ * TOOLS: mixins
+ * No generen CSS fins que s'inclouen.
+ */
+
+@use "functions";
+
+/// Media query mobile first a partir d'un breakpoint.
+/// @param {String} $name - Nom del breakpoint (sm, md, lg, xl)
+/// @example @include mq(md) { ... }
+@mixin mq($name) {
+  @media (min-width: functions.breakpoint($name)) {
+    @content;
+  }
+}

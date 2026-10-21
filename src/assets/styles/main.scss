@@ -1,6 +1,9 @@
 /**
  * Use this file to import partials.
  * Do not include SCSS code in this file.
+ *
+ * Arquitectura ITCSS: les capes s'importen de menys a més específiques.
+ * Settings i Tools no generen CSS; s'importen des de cada parcial amb @use.
  */
 
 /**
@@ -9,11 +12,13 @@
 @use "dependencies";
 
 /**
- * Import layouts
- * It's a best practice to use a different partial for each page
+ * ITCSS layers
  */
-
-@use "layouts/home";
+@use "generic";
+@use "elements";
+@use "objects";
+@use "components";
+@use "utilities";
 
 /**
  * Do NOT include anything else in this file!

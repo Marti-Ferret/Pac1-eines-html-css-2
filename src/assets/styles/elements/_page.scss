@@ -1,0 +1,17 @@
+/**
+ * ELEMENTS: page
+ */
+
+@use "../settings";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: settings.$font-family-body;
+  font-size: settings.$font-size-base;
+  line-height: settings.$line-height-base;
+  color: settings.$color-text;
+  background-color: settings.$color-bg;
+}

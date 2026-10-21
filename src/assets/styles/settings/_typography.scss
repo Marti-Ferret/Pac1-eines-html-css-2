@@ -1,0 +1,14 @@
+/**
+ * SETTINGS: typography
+ * Les fonts s'importen a _dependencies.scss (@fontsource).
+ */
+
+$font-family-display: "Fredoka", "Trebuchet MS", sans-serif;
+$font-family-body: "Nunito", "Helvetica Neue", arial, sans-serif;
+
+// Mida base en px, usada per la funció rem()
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+$font-weight-regular: 400;
+$font-weight-bold: 700;

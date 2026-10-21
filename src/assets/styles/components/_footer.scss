@@ -1,0 +1,18 @@
+/**
+ * COMPONENTS: footer
+ */
+
+@use "../settings";
+@use "../tools";
+
+.c-footer {
+  padding-block: tools.spacing(4);
+  font-size: tools.rem(14px);
+  color: settings.$color-cream;
+  text-align: center;
+  background-color: settings.$color-jungle-dark;
+
+  &__link {
+    color: settings.$color-banana;
+  }
+}

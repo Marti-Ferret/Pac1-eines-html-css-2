@@ -1,0 +1,18 @@
+/**
+ * OBJECTS: container
+ * Contenidor centrat amb amplada màxima.
+ */
+
+@use "../settings";
+@use "../tools";
+
+.o-container {
+  width: 100%;
+  max-width: settings.$container-max-width;
+  padding-inline: tools.spacing(2);
+  margin-inline: auto;
+
+  @include tools.mq(md) {
+    padding-inline: tools.spacing(4);
+  }
+}
