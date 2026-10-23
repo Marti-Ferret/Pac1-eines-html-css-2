@@ -1,0 +1,24 @@
+/**
+ * COMPONENTS: profile
+ * Fitxa d'una persona o personatge amb icona.
+ */
+
+@use "../settings";
+@use "../tools";
+
+.c-profile {
+  display: flex;
+  flex-direction: column;
+  gap: tools.spacing(2);
+  align-items: center;
+  text-align: center;
+
+  &__avatar {
+    font-size: tools.rem(48px);
+    color: settings.$color-primary;
+  }
+
+  &__name {
+    margin-bottom: tools.spacing(1);
+  }
+}

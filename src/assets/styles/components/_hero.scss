@@ -1,0 +1,33 @@
+/**
+ * COMPONENTS: hero
+ * Capçalera de la pàgina amb el títol del llibre.
+ */
+
+@use "../settings";
+@use "../tools";
+
+.c-hero {
+  padding-block: tools.spacing(8);
+  color: settings.$color-cream;
+  text-align: center;
+  background-color: settings.$color-jungle;
+
+  @include tools.mq(md) {
+    padding-block: tools.spacing(12);
+  }
+
+  &__label {
+    margin-bottom: tools.spacing(2);
+    color: settings.$color-banana;
+  }
+
+  &__title {
+    max-width: 14ch;
+    margin-inline: auto;
+  }
+
+  &__author {
+    margin-top: tools.spacing(2);
+    font-size: tools.rem(20px);
+  }
+}

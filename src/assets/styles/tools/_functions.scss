@@ -26,16 +26,6 @@
   @return rem($multiplier * settings.$spacing-unit);
 }
 
-/// Retorna el z-index d'una capa definida a $z-layers.
-/// @param {String} $layer - Nom de la capa
-@function z($layer) {
-  @if not map.has-key(settings.$z-layers, $layer) {
-    @error "La capa `#{$layer}` no existeix a $z-layers.";
-  }
-
-  @return map.get(settings.$z-layers, $layer);
-}
-
 /// Retorna el valor d'un breakpoint definit a $breakpoints.
 /// @param {String} $name - Nom del breakpoint
 @function breakpoint($name) {

@@ -1,0 +1,20 @@
+/**
+ * COMPONENTS: heading
+ * Títol de secció amb icona.
+ */
+
+@use "../settings";
+@use "../tools";
+
+.c-heading {
+  display: flex;
+  gap: tools.spacing(1.5);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: tools.spacing(3);
+
+  &__icon {
+    font-size: 0.8em;
+    color: settings.$color-primary;
+  }
+}

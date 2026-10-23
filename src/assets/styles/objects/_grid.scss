@@ -1,0 +1,16 @@
+/**
+ * OBJECTS: grid
+ * Graella d'una columna en mòbil i tres a partir de md.
+ */
+
+@use "../tools";
+
+.o-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: tools.spacing(3);
+
+  @include tools.mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

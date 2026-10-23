@@ -1,0 +1,24 @@
+/**
+ * COMPONENTS: card
+ * Targeta amb icona, títol i text.
+ */
+
+@use "../settings";
+@use "../tools";
+
+.c-card {
+  padding: tools.spacing(3);
+  text-align: center;
+  background-color: settings.$color-white;
+  border-radius: settings.$border-radius;
+
+  &__icon {
+    margin-bottom: tools.spacing(1.5);
+    font-size: tools.rem(28px);
+    color: settings.$color-primary;
+  }
+
+  &__title {
+    margin-bottom: tools.spacing(1);
+  }
+}

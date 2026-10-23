@@ -13,13 +13,146 @@
     <title>La molt catastròfica visita al zoo · Joël Dicker</title>
   </head>
   <body>
-    <main>
+    <header class="c-hero">
       <div class="o-container">
-        <h1>
-          La molt catastròfica visita al zoo
-        </h1>
+        <h1 class="c-hero__title">La molt catastròfica visita al zoo</h1>
+        <p class="c-hero__author">Joël Dicker</p>
       </div>
+    </header>
+
+    <main>
+      <section class="o-section" aria-labelledby="llibre-titol">
+        <div class="o-container">
+          <h2 class="c-heading" id="llibre-titol">
+            <i class="fa-solid fa-bus c-heading__icon" aria-hidden="true"></i>
+            De què va?
+          </h2>
+          <p class="c-text">
+            Un grup de nens va d'excursió al zoo amb l'escola i la visita acaba
+            sent un desastre. Ningú no sap ben bé què ha passat, i una de les
+            nenes del grup decideix explicar-ho tot des del principi, com si
+            fos una investigació.
+          </p>
+          <p class="c-text">
+            És una història curta, divertida i plena de situacions absurdes,
+            però que també fa pensar en com ens escoltem els uns als altres.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="o-section o-section--alt"
+        aria-labelledby="protagonista-titol"
+      >
+        <div class="o-container">
+          <h2 class="c-heading" id="protagonista-titol">
+            <i class="fa-solid fa-user c-heading__icon" aria-hidden="true"></i>
+            La protagonista
+          </h2>
+          <article class="c-profile">
+            <div class="c-profile__body">
+              <h3 class="c-profile__name">Joséphine</h3>
+              <p class="c-text">
+                És la narradora del llibre. És una nena curiosa i decidida que
+                vol que tothom sàpiga la veritat sobre el que va passar al zoo.
+                Com que ho explica ella, tot es veu des del punt de vista d'una
+                nena, i això fa que moltes coses dels adults semblin encara més
+                estranyes.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="o-section" aria-labelledby="especial-titol">
+        <div class="o-container">
+          <h2 class="c-heading" id="especial-titol">
+            <i class="fa-solid fa-star c-heading__icon" aria-hidden="true"></i>
+            Per què és especial
+          </h2>
+          <ul class="o-grid">
+            <li class="c-card">
+              <i class="fa-solid fa-face-laugh-squint c-card__icon" aria-hidden="true"></i>
+              <h3 class="c-card__title">Molt divertit</h3>
+              <p class="c-text">
+                Té un to d'humor que no és gaire habitual en els llibres de
+                l'autor.
+              </p>
+            </li>
+            <li class="c-card">
+              <i class="fa-solid fa-users c-card__icon" aria-hidden="true"></i>
+              <h3 class="c-card__title">Per a totes les edats</h3>
+              <p class="c-text">
+                Es pot llegir de petit o de gran, i cadascú hi troba coses
+                diferents.
+              </p>
+            </li>
+            <li class="c-card">
+              <i class="fa-solid fa-magnifying-glass c-card__icon" aria-hidden="true"></i>
+              <h3 class="c-card__title">Com una investigació</h3>
+              <p class="c-text">
+                La història s'explica a poc a poc, com si anéssim descobrint
+                les pistes.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section
+        class="o-section o-section--alt"
+        aria-labelledby="recomano-titol"
+      >
+        <div class="o-container">
+          <h2 class="c-heading" id="recomano-titol">
+            <i class="fa-solid fa-heart c-heading__icon" aria-hidden="true"></i>
+            Per què el recomano
+          </h2>
+          <p class="c-text">
+            Feia un parell d'anys que havia desconnectat de la lectura, i
+            gràcies a aquest llibre m'hi he tornat a enganxar. És molt fàcil de
+            llegir i és molt graciós, sobretot perquè tot l'humor surt de la
+            manera de pensar d'una nena molt jove.
+          </p>
+          <p class="c-text">
+            El vocabulari és senzill i divertit, i això fa que avancis ràpid
+            sense adonar-te'n. Tot i ser un llibre lleuger, fa riure i alhora
+            et deixa pensant en com els adults veuen les coses de manera
+            diferent que els nens.
+          </p>
+          <p class="c-text">
+            El recomanaria sobretot a qui, com jo, vulgui tornar a agafar
+            l'hàbit de llegir i busqui alguna cosa curta i entretinguda per
+            començar.
+          </p>
+        </div>
+      </section>
+
+      <section class="o-section" aria-labelledby="autor-titol">
+        <div class="o-container">
+          <h2 class="c-heading" id="autor-titol">
+            <i class="fa-solid fa-pen-nib c-heading__icon" aria-hidden="true"></i>
+            L'autor
+          </h2>
+          <article class="c-profile">
+            <div class="c-profile__avatar" aria-hidden="true">
+              <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <div class="c-profile__body">
+              <h3 class="c-profile__name">Joël Dicker</h3>
+              <p class="c-text">
+                Escriptor suís nascut a Ginebra l'any 1985. Es va fer famós
+                amb <cite>La veritat sobre el cas Harry Quebert</cite>, una
+                novel·la de suspens que es va traduir a moltíssimes llengües.
+                Normalment escriu thrillers, i per això aquest llibre és una
+                sorpresa: és molt més lleuger i amb molt d'humor.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->

@@ -1,0 +1,19 @@
+/**
+ * OBJECTS: section
+ * Espaiat vertical de les seccions de la pàgina.
+ */
+
+@use "../settings";
+@use "../tools";
+
+.o-section {
+  padding-block: tools.spacing(6);
+
+  @include tools.mq(md) {
+    padding-block: tools.spacing(10);
+  }
+
+  &--alt {
+    background-color: settings.$color-white;
+  }
+}

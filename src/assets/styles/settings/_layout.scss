@@ -1,6 +1,6 @@
 /**
  * SETTINGS: layout
- * Breakpoints (mobile first), espaiat i capes de z-index.
+ * Breakpoints (mobile first) i espaiat.
  */
 
 $breakpoints: (
@@ -16,8 +16,3 @@ $spacing-unit: 8px;
 $container-max-width: 1120px;
 $border-radius: 16px;
 
-$z-layers: (
-  "base": 1,
-  "header": 10,
-  "overlay": 100,
-);

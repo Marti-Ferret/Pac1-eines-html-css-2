@@ -1,0 +1,16 @@
+/**
+ * COMPONENTS: text
+ * Paràgrafs de contingut.
+ */
+
+@use "../tools";
+
+.c-text {
+  max-width: 65ch;
+  margin-inline: auto;
+  text-align: center;
+
+  & + & {
+    margin-top: tools.spacing(2);
+  }
+}
